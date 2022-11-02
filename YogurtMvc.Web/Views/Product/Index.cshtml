@@ -1,0 +1,29 @@
+﻿@model IPagedList<Product>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <th>1</th>
+                <td>@product.Name</td>
+                <td>
+                    <span class="badge badge-primary px-2">Sale</span>
+                </td>
+                <td>January 22</td>
+                <td class="color-primary">$21.56</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div page-model="@Model" page-action="Index" class="bootstrap-pagination"></div>
